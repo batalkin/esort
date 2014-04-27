@@ -17,7 +17,7 @@ public abstract class DescendingSortTest extends TestCase {
         File out = new File("test_data/numbers.tmp");
 
         int max = getMax();
-        
+
         System.out.printf("Creating test file with descending sequence from %d to 1 %n", max);
 
         Utils.writeNumbers(file, max);

@@ -21,7 +21,7 @@ public class App {
         }
 
         if (file.length() % 4 != 0) {
-            System.err.println("File does not seem to be set of 32bit integers. Its length is not divisible by 2.");
+            System.err.println("File does not seem to be set of 32bit integers. Its length is not divisible by 4.");
         }
 
         int threads = 1;

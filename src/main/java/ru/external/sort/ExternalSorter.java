@@ -42,7 +42,7 @@ public class ExternalSorter {
             }
 
             if (verbose) {
-                System.out.printf("Sorting chunks of a base file, using %d threads.%n", threads);
+                System.out.printf("Sorting chunks of the base file, using %d threads.%n", threads);
             }
 
             boolean sortDone = sortChunks(blocks, fileRaf, tempRaf, threads);
