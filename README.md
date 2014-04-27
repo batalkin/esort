@@ -1,10 +1,8 @@
 # External Sort
-===============
 
 Utility sorts binary files of 32-bit integers.
 
 ## Compile
-===============
 
 To compile utility just run
 ```
