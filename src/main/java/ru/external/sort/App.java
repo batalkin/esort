@@ -46,10 +46,10 @@ public class App {
         switch (sort) {
 
             case WELL_DONE:
-                System.out.printf("File %s has been sorted in %d ms", file.getPath(), System.currentTimeMillis() - start);
+                System.out.printf("File %s has been sorted in %d ms%n", file.getPath(), System.currentTimeMillis() - start);
                 break;
             case ERROR:
-                System.out.printf("File %s has not been sorted", file.getPath());
+                System.out.printf("File %s has not been sorted%n", file.getPath());
                 break;
         }
 

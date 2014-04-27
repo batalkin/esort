@@ -96,4 +96,10 @@ public class Utils {
         return new DataOutputStream(new BufferedOutputStream(new FileOutputStream(output.getFD())));
     }
 
+//    public static void main(String[] args) throws IOException {
+//        File file = new File("/home/kirill/Workspace/numbers");
+//        writeNumbers(file, 2400000);
+//        print(file);
+//    }
+
 }

@@ -12,13 +12,19 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by kirill on 23.04.14.
  */
-public class ChunkReaderTest extends TestCase {
+public abstract class DescendingSortTest extends TestCase {
+
+    protected abstract int getMax();
 
     public void testSort() throws Exception {
         File file = new File("test_data/numbers");
         File out = new File("test_data/numbers.tmp");
 
-        Utils.writeNumbers(file, 300000000);
+        int max = getMax();
+
+        System.out.printf("Creating test file with descending sequence from %d to 1 %n", max);
+
+        Utils.writeNumbers(file, max);
         ExternalSorter sorter = new ExternalSorter();
 
         long start = System.currentTimeMillis();
@@ -28,10 +34,10 @@ public class ChunkReaderTest extends TestCase {
         switch (sort) {
 
             case WELL_DONE:
-                System.out.printf("File %s has been sorted in %d ms", file.getPath(), System.currentTimeMillis() - start);
+                System.out.printf("File %s has been sorted in %d ms%n", file.getPath(), System.currentTimeMillis() - start);
                 break;
             case ERROR:
-                System.out.printf("File %s has not been sorted", file.getPath());
+                System.out.printf("File %s has not been sorted%n", file.getPath());
                 break;
         }
 
