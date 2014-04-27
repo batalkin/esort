@@ -11,8 +11,9 @@ mvn clean package
 now you have `targer/sort.jar` file.
 
 ## Usage
-Usage: java -jar sort.jar filename [number of additional threads > 1];
-Example: sort big_data 10
+*Usage*: java -jar sort.jar filename [number of additional threads > 1]
+
+*Example*: sort big_data 10
 
 ## Test
 There are three predefined tests for files with 800000, 80000000 and 300000000 numbers.
